@@ -5,10 +5,9 @@ dotenv.config();
 
 const mongoose = require("mongoose");
 const router = require("./routes/todoRoutes");
-const live_url = process.env.MONGODB_URI;
 
 mongoose
-  .connect(live_url)
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("Connection Error: ", err));
   
