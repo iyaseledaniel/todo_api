@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const router = require("./routes/todoRoutes");
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.LIVE_URL)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("Connection Error: ", err));
   
